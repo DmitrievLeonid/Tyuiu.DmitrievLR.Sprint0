@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-using Tyuiu.DmitrievLR.Sprint0.Task2.V0.lib;
+using Tyuiu.DmitrievLR.Sprint0.Task2.V0.Lib;
 
 namespace Tyuiu.DmitrievLR.Sprint0.Task2.V0.Test
 {
@@ -12,10 +12,9 @@ namespace Tyuiu.DmitrievLR.Sprint0.Task2.V0.Test
         public void CheckGetMessageValid()
         {
             var name = "Леонид";
-            //запрос к библиотеке 
+            // вызов функции
             var res = DataService.GetMessage(name);
 
-            // Assert - ожидание такого же ответа
             Assert.AreEqual("Привет..., Леонид", res);
         }
     }
